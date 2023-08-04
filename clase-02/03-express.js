@@ -6,8 +6,11 @@ const PORT = process.env.PORT ?? 1234
 const app = express()
 app.disable('x-powered-by')
 
+// Esto hace lo mismo del middleware de abajo
 app.use(express.json())
 
+// TODO: Middleware
+// Una especie de interceptor para pre tratar las requests
 // app.use((req, res, next) => {
 //   if (req.method !== 'POST') return next()
 //   if (req.headers['content-type'] !== 'application/json') return next()
